@@ -12,22 +12,21 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+dotenv_path = BASE_DIR / '.env'
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
+if dotenv_path.exists():
+    load_dotenv(dotenv_path)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i#gdut58+-#s!7b)6rs%71+p90!0rd%_bd)@se)3(d5#o#!u(o'
+SECRET_KEY = os.getenv('SECRET_KEY', 'laipy#0z09+&=yr+ntwmfxgmjqve1!u1ouk=fh6vsvj@uhwwi_')
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ["127.0.0.1", "dailyspark.api.com"]
-
+# Разрешённые хосты
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1').split(',')
 
 # Application definition
 

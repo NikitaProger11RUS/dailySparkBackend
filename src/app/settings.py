@@ -25,7 +25,7 @@ SECRET_KEY = 'i#gdut58+-#s!7b)6rs%71+p90!0rd%_bd)@se)3(d5#o#!u(o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["dailyspark.api.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "dailyspark.api.com"]
 
 
 # Application definition

@@ -11,3 +11,4 @@ tzdata==2025.2
 uritemplate==4.2.0
 waitress==3.0.2
 psycopg2==2.9.7
+python-dotenv==1.0.0

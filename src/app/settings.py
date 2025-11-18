@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ic50ru-mc@8a11r0(%(1@vpnrp*s!0ub+&m(#&h!^n2+a@!-!2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["daily.spark.api.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

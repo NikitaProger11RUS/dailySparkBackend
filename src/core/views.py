@@ -7,7 +7,7 @@ from .models import Note
 from .serializers import NoteSerializer
 
 @api_view(['GET'])
-def health_check(request):
+def ping_check(request):
     return Response({"status": "ok"})
 
 # ModelViewSet автоматически создаёт стандартные 

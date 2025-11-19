@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'laipy#0z09+&=yr+ntwmfxgmjqve1!u1ouk=fh6vsv
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 # Разрешённые хосты
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 
 # Application definition
 
